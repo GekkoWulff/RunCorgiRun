@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class Corgi : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    
+    //access sprite renderer
+    private SpriteRenderer corgiSpriteRenderer;
+
+    public void Awake()
     {
-        
+        corgiSpriteRenderer = GetComponent<SpriteRenderer>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void Move(Vector2 direction)
     {
-        
+        corgiSpriteRenderer.transform.Translate(direction);
     }
+    //change position 
 }
